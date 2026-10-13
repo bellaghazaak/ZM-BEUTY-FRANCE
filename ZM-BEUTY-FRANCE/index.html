@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZM BEAUTY FRANCE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">ZM <span>BEAUTY</span></a>
+        <p class="subtitle">FRANCE · MODE & ACCESSOIRES</p>
+
+        <nav>
+            <a href="#accueil">Accueil</a>
+            <a href="#produits">Boutique</a>
+            <a href="#contact">Contact</a>
+            <button id="cart-button">🛍️ Panier (<span id="cart-count">0</span>)</button>
+        </nav>
+    </header>
+
+    <section class="hero" id="accueil">
+        <div>
+            <p class="eyebrow">COLLECTION · NOUVELLE SAISON</p>
+            <h1>Votre style,<br><span>votre beauté.</span></h1>
+            <p class="description">
+                Découvrez notre sélection de vêtements
+                et d'accessoires pour affirmer votre style.
+            </p>
+            <a href="#produits" class="shop-button">DÉCOUVRIR LA BOUTIQUE →</a>
+        </div>
+    </section>
+
+    <main id="produits">
+        <div class="section-heading">
+            <p class="eyebrow">NOTRE SÉLECTION</p>
+            <h2>Nos produits</h2>
+            <p>Des pièces choisies pour votre style.</p>
+        </div>
+
+        <div class="search-box">
+            <input id="search" type="search"
+                   placeholder="Rechercher un produit...">
+        </div>
+
+        <div class="filters">
+            <button class="filter active" data-category="Tous">Tout</button>
+            <button class="filter" data-category="Vêtements">Vêtements</button>
+            <button class="filter" data-category="Accessoires">Accessoires</button>
+        </div>
+
+        <div id="product-list" class="products"></div>
+
+        <section class="cart-section" id="panier">
+            <h2>🛍️ Votre panier</h2>
+            <div id="cart-items"></div>
+            <h3>Total : <span id="cart-total">0,00 </span></h3>
+            <button id="checkout-button" class="shop-button">
+                COMMANDER
+            </button>
+            <p class="delivery-note">Paiement à la livraison.</p>
+        </section>
+
+        <section class="order-section" id="commande" hidden>
+            <h2>Finaliser votre commande</h2>
+            <form id="order-form">
+                <label>Nom complet
+                    <input name="name" required>
+                </label>
+
+                <label>Téléphone
+                    <input name="phone" type="tel" required>
+                </label>
+
+                <label>Adresse de livraison
+                    <textarea name="address" required></textarea>
+                </label>
+
+                <label>Ville et code postal
+                    <input name="city" required>
+                </label>
+
+                <button type="submit" class="shop-button">
+                    ENVOYER LA COMMANDE
+                </button>
+            </form>
+            <p id="order-message"></p>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <h2>ZM <span>BEAUTY FRANCE</span></h2>
+        <p>Mode · Vêtements · Accessoires</p>
+        <p>Votre style, votre beauté.</p>
+        <small>© 2026 ZM BEAUTY FRANCE</small>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
