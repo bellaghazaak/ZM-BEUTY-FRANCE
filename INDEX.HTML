@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZM BEAUTY FRANCE | Boutique mode & accessoires</title>
+    <meta name="description" content="Boutique mode féminine et accessoires à El Fahs. Découvrez nos produits et commandez sur WhatsApp.">
+    <link rel="icon" href="logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip-link" href="#produits">Aller aux produits</a>
+
+    <div class="announcement">
+        Livraison partout en Tunisie <span>•</span> Paiement à la livraison <span>•</span> Boutique El Fahs
+    </div>
+
+    <header class="header">
+        <a class="logo" href="#accueil" aria-label="ZM BEAUTY FRANCE accueil">
+            <img src="logo.svg" alt="Logo ZM BEAUTY FRANCE" width="52" height="52">
+            <span>
+                <span class="brand-name">ZM BEAUTY FRANCE</span>
+                <span class="brand-country">EL FAHS</span>
+            </span>
+        </a>
+
+        <nav aria-label="Navigation principale">
+            <a href="#produits">Produits</a>
+            <a href="#panier">Panier</a>
+            <a href="#faq">FAQ</a>
+            <a href="#sur-demande">Sur demande</a>
+            <button id="cart-button" type="button" aria-label="Voir mon panier">
+                Mon panier <span id="cart-count" aria-label="Nombre d'articles">0</span>
+            </button>
+        </nav>
+    </header>
+
+    <main id="accueil">
+        <section class="hero">
+            <div>
+                <p class="eyebrow">ZM BEAUTY FRANCE · EL FAHS</p>
+                <h1>Des looks qui font <span>l’effet</span> sans effort.</h1>
+                <p class="description">
+                    Accessoires chic, pièces tendance et essentiels mode féminine pensés pour vous faire briller au quotidien.
+                </p>
+                <a class="shop-button" href="#produits">Découvrir les produits <span aria-hidden="true">↗</span></a>
+                <p class="hero-note">Commande rapide • Paiement à la livraison • Livraison dans la région</p>
+            </div>
+
+            <div class="hero-visual" aria-label="Collection mode féminine">
+                <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=1200" alt="Modèle en tenue mode élégante" width="1200" height="760">
+                <div class="image-caption">
+                    <span>Collection printemps</span>
+                    <strong>Femme élégante</strong>
+                </div>
+                <div class="visual-label">NEW</div>
+            </div>
+        </section>
+
+        <div class="service-strip" aria-label="Services">
+            <p><span>01</span>Livraison rapide</p>
+            <p><span>02</span>Paiement à la livraison</p>
+            <p><span>03</span>Produit sur demande</p>
+        </div>
+
+        <section id="produits" aria-labelledby="catalog-title">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Boutique</p>
+                    <h2 id="catalog-title">Nos bestsellers</h2>
+                </div>
+                <p>Édition mode féminine & accessoires tendance</p>
+            </div>
+
+            <div class="catalog-toolbar">
+                <div class="search-box">
+                    <label class="sr-only" for="search">Rechercher un produit</label>
+                    <input id="search" type="search" placeholder="Rechercher un produit..." aria-label="Rechercher un produit">
+                </div>
+
+                <div class="sort-box">
+                    <label for="sort">Trier</label>
+                    <select id="sort" aria-label="Trier les produits">
+                        <option value="featured">Sélection</option>
+                        <option value="price-asc">Prix croissant</option>
+                        <option value="price-desc">Prix décroissant</option>
+                        <option value="name">Nom</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="filters" aria-label="Filtres par catégorie">
+                <button class="filter active" type="button" data-category="Tous" aria-pressed="true">Tous</button>
+                <button class="filter" type="button" data-category="Accessoires" aria-pressed="false">Accessoires</button>
+                <button class="filter" type="button" data-category="Vêtements" aria-pressed="false">Vêtements</button>
+            </div>
+
+            <p id="product-count" class="product-count" aria-live="polite">0 pièce dans la sélection</p>
+            <div id="product-list" class="products" aria-live="polite"></div>
+        </section>
+
+        <div class="checkout-layout">
+            <section id="panier" class="cart-section" aria-labelledby="panier-heading">
+                <p class="eyebrow">Mon panier</p>
+                <h2 id="panier-heading">Votre sélection</h2>
+                <div id="cart-items" aria-live="polite"></div>
+
+                <div class="totals" aria-live="polite">
+                    <p><span>Sous-total</span><strong id="cart-subtotal">0,00 DT</strong></p>
+                    <p><span>Livraison</span><strong id="cart-shipping">0,00 DT</strong></p>
+                    <h3><span>Total</span><strong id="cart-total">0,00 DT</strong></h3>
+                </div>
+
+                <button id="checkout-button" class="shop-button" type="button" disabled>Préparer ma commande ↗</button>
+                <p class="delivery-note">Paiement à la livraison • Disponibilité confirmée par la boutique</p>
+            </section>
+
+            <section id="commande" class="order-section" hidden aria-labelledby="order-heading">
+                <p class="eyebrow">Commande</p>
+                <h2 id="order-heading">Préparer votre commande</h2>
+
+                <form id="order-form" novalidate>
+                    <label>
+                        Nom
+                        <input type="text" name="name" placeholder="Votre nom" required>
+                    </label>
+
+                    <label>
+                        Téléphone
+                        <input type="tel" name="phone" placeholder="+216 ..." required>
+                    </label>
+
+                    <label>
+                        Adresse
+                        <input type="text" name="address" placeholder="Adresse exacte" required>
+                    </label>
+
+                    <label>
+                        Ville
+                        <input type="text" name="city" placeholder="Ville" required>
+                    </label>
+
+                    <button type="submit" class="shop-button">Envoyer via WhatsApp ↗</button>
+                    <p id="order-message" aria-live="polite"></p>
+                </form>
+            </section>
+        </div>
+
+        <section id="faq" class="faq" aria-labelledby="faq-title">
+            <div>
+                <p class="eyebrow">FAQ</p>
+                <h2 id="faq-title">Questions fréquentes</h2>
+            </div>
+
+            <div class="faq-list">
+                <details open>
+                    <summary>Comment passer une commande ?</summary>
+                    <p>Choisissez vos articles, préparez votre commande, puis envoyez la demande par WhatsApp. La boutique confirme la disponibilité et les détails de livraison.</p>
+                </details>
+                <details>
+                    <summary>Le paiement est-il à la livraison ?</summary>
+                    <p>Oui, le paiement se fait à la livraison selon les modalités confirmées par la boutique.</p>
+                </details>
+                <details>
+                    <summary>Peut-on demander un article non visible ?</summary>
+                    <p>Oui. Vous pouvez envoyer une photo ou demander un modèle précis via le formulaire de demande sur mesure.</p>
+                </details>
+            </div>
+        </section>
+
+        <section id="sur-demande" class="custom-request" aria-labelledby="custom-request-title">
+            <div class="request-intro">
+                <p class="eyebrow">Sur demande</p>
+                <h2 id="custom-request-title">Tu cherches un produit <span>spécifique</span> ?</h2>
+                <p>Envoie-nous une photo ou décris le produit souhaité. On vous répondra avec le prix et la disponibilité.</p>
+                <a href="#produits">Voir tous les produits ↗</a>
+                <p class="custom-request request-note">Commande personnalisée • Produit non listé • Photo recommandée</p>
+            </div>
+
+            <form id="request-form" novalidate enctype="multipart/form-data">
+                <label>
+                    Nom
+                    <input type="text" name="customer-name" placeholder="Votre nom" required>
+                </label>
+
+                <label>
+                    Téléphone
+                    <input type="tel" name="phone" placeholder="+216 ..." required>
+                </label>
+
+                <label>
+                    Détails du produit
+                    <textarea name="request" rows="3" placeholder="Décrivez votre produit ou ajoutez un modèle souhaité"></textarea>
+                </label>
+
+                <label>
+                    Ajouter une photo (facultatif)
+                    <input id="request-photo" type="file" name="photo" accept="image/jpeg,image/png,image/webp">
+                </label>
+
+                <p id="photo-status" class="request-note" aria-live="polite"></p>
+                <img id="photo-preview" class="photo-preview" alt="Aperçu de la photo" hidden>
+
+                <button id="request-submit" class="shop-button" type="submit">Envoyer ma demande · Ab3ath ↗</button>
+                <p id="request-status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-brand">
+            <img src="logo.svg" alt="Logo ZM BEAUTY FRANCE" width="64" height="64">
+            <h2>ZM BEAUTY FRANCE</h2>
+            <p>Accessoires & mode féminine <span>•</span> El Fahs</p>
+            <address>WhatsApp : <a href="https://wa.me/21650689730" target="_blank" rel="noopener noreferrer">+216 50 689 730</a></address>
+            <div class="contact-links">
+                <a href="#produits">Boutique</a>
+                <a href="#sur-demande">Demande personnalisée</a>
+            </div>
+        </div>
+        <small>© ZM BEAUTY FRANCE • Tous droits réservés</small>
+    </footer>
+
+    <div id="cart-feedback" class="toast" role="status" aria-live="polite" hidden></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

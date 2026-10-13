@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-labelledby="title desc">
+  <title id="title">ZM BEAUTY FRANCE</title>
+  <desc id="desc">Logo de la boutique ZM BEAUTY FRANCE</desc>
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f3d9de"/>
+      <stop offset="100%" stop-color="#92526b"/>
+    </linearGradient>
+  </defs>
+  <rect width="180" height="180" rx="36" fill="#f8f1f1"/>
+  <circle cx="90" cy="90" r="72" fill="url(#g1)" opacity="0.18"/>
+  <path d="M41 126V54h22l30 42 30-42h22v72h-18V80l-31 44h-7L59 80v46H41z" fill="#35252b"/>
+  <path d="M88 41h43v18H88z" fill="#92526b"/>
+  <circle cx="132" cy="132" r="8" fill="#92526b" opacity="0.9"/>
+</svg>
